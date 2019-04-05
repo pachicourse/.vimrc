@@ -78,7 +78,17 @@ Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
+" Python用
+Plugin 'davidhalter/jedi-vim'
+
+" git
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+
 call vundle#end()
 
 " backspace setting
 set backspace=indent,eol,start
+
+" Omni
+set omnifunc=syntaxcomplete#Complete
