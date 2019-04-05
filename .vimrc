@@ -1,3 +1,7 @@
+" 色設定
+colorscheme elflord
+syntax enable
+
 " setting
 "文字コードをUFT-8に設定
 set fenc=utf-8
@@ -60,9 +64,6 @@ set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
-" 色設定
-colorscheme elflord
-
 " Plugin設定
 " vundle.vimを使う
 set rtp+=~/.vim/bundle/Vundle.vim/
@@ -78,3 +79,6 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()
+
+" backspace setting
+set backspace=indent,eol,start
