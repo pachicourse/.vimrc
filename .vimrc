@@ -70,6 +70,9 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
+" 構文チェッカ
+Plugin 'scrooloose/syntastic'
+
 " golang用
 Plugin 'fatih/vim-go'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
@@ -77,9 +80,12 @@ Plugin 'nsf/gocode', {'rtp': 'vim/'}
 " Markdown用
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+let g:vim_markdown_folding_disabled = 1
 
 " Python用
 Plugin 'davidhalter/jedi-vim'
+Plugin 'Glench/Vim-Jinja2-Syntax'
+let g:syntastic_python_checkers = ["flake8"]
 
 " git
 Plugin 'airblade/vim-gitgutter'
@@ -91,4 +97,4 @@ call vundle#end()
 set backspace=indent,eol,start
 
 " Omni
-set omnifunc=syntaxcomplete#Complete
+" set omnifunc=syntaxcomplete#Complete
