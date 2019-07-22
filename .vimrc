@@ -76,20 +76,31 @@ Plugin 'scrooloose/syntastic'
 " golang用
 Plugin 'fatih/vim-go'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
+let g:go_gocode_unimported_packages = 1
+let g:go_fmt_command = "goimports"
+au BufNewFile,BufRead *.go set noexpandtab tabstop=4 shiftwidth=4
 
 " Markdown用
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled = 1
+au BufNewFile,BufRead *.md set expandtab tabstop=4 shiftwidth=4
 
 " Python用
 Plugin 'davidhalter/jedi-vim'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 let g:syntastic_python_checkers = ["flake8"]
+" jedi-vimにtab設定が入ってるっぽいのでいらない
 
 " git
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
+
+" ctrlp.vim
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" toml
+Plugin 'cespare/vim-toml'
 
 call vundle#end()
 
@@ -97,4 +108,4 @@ call vundle#end()
 set backspace=indent,eol,start
 
 " Omni
-" set omnifunc=syntaxcomplete#Complete
+set omnifunc=syntaxcomplete#Complete
