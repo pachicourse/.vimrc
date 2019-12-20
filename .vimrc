@@ -78,7 +78,7 @@ Plugin 'fatih/vim-go'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 let g:go_gocode_unimported_packages = 1
 let g:go_fmt_command = "goimports"
-let g:syntastic_go_checkers = ['go', 'golint', 'govet']
+let g:syntastic_go_checkers = ['errcheck', 'golint', 'govet']
 au BufNewFile,BufRead *.go set noexpandtab tabstop=4 shiftwidth=4
 
 " Markdown用
